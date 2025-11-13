@@ -1,0 +1,60 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #f3fdf5;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    margin: 30px auto;
+    width: 80%;
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
+}
+
+h1, h2 {
+    color: #2e7d32;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+textarea, input, button {
+    padding: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background: #4caf50;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background: #43a047;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 15px auto;
+}
+td {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #aaa;
+}
+
+.path { background-color: #b2dfdb; }        /* normal path */
+.path-coin { background-color: gold; }      /* coin path */
+.start { background-color: #81c784; }       /* sheep start */
+.home { background-color: #4caf50; }        /* home */
+.tiger { background-color: #ef5350; }       /* tiger */
+.coin { background-color: #ffeb3b; }        /* coin */
+.empty { background-color: #f0f0f0; }

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>🐑 Save the Sheep!</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>🐑 Save the Sheep from the Tiger 🐅</h1>
+    <form method="POST" action="/run">
+        <label>Maximum Steps:</label>
+        <input type="number" name="max_steps" required>
+
+        <label>Rows:</label>
+        <input type="number" name="rows" required>
+
+        <label>Columns:</label>
+        <input type="number" name="cols" required>
+
+        <label>Enter Grid (use '.', 'S', 'T', 'H', 'C'):</label>
+        <textarea name="grid" rows="6" placeholder="Example:
+. S . .
+C . T H
+. . . ." required></textarea>
+
+        <button type="submit">Run Genetic Algorithm</button>
+    </form>
+</div>
+</body>
+</html>
+<!-- UTSHO -->

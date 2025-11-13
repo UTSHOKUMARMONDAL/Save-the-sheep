@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result - Save the Sheep</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>🌿 Best Path Found</h1>
+
+    <p><strong>Best Fitness Score:</strong> {{ score }}</p>
+    <p><strong>Child saved:</strong> {{ coins }}</p>
+    <p><strong>Steps Taken:</strong> {{ steps }}</p>
+    <p><strong>Home Reached:</strong>
+        {% if reached %} ✅ Yes {% else %} ❌ No {% endif %}
+    </p>
+
+    <h2>📜 Path Directions</h2>
+    <p>{{ best_path }}</p>
+
+    <h2>🐑 Path on Grid</h2>
+    <table>
+        {% for row in grid %}
+        <tr>
+            {% for cell in row %}
+            <td class="
+                {% if cell == '*' %}path
+                {% elif cell == '**' %}path-coin
+                {% elif cell == 'S' %}start
+                {% elif cell == 'H' %}home
+                {% elif cell == 'T' %}tiger
+                {% elif cell == 'C' %}coin
+                {% else %}empty{% endif %}
+            ">{{ cell }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+
+    <a href="/">🔁 Try Again</a>
+</div>
+</body>
+</html>
