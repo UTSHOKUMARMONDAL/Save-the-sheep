@@ -3,9 +3,7 @@ import random
 
 app = Flask(__name__)
 
-# -----------------------------
-# GA Core Functions
-# -----------------------------
+
 def move_position(pos, move, grid, ROWS, COLS):
     x, y = pos
     new_x, new_y = x, y
@@ -140,16 +138,14 @@ def run_algorithm():
                 best_fit = fit
                 best_path = chrom
 
-    # ------------------------------------------------------
-    # EXECUTED GA PATH (NO DUPLICATE CHILD COUNTING)
-    # ------------------------------------------------------
+
     pos = start_pos
     grid_path = [row[:] for row in grid]
     executed_moves = []
     coins_collected = 0
     steps_taken = 0
     home_reached = False
-    visited_final = set()    # FIXED: prevent child double-counting
+    visited_final = set()  
 
     for move in best_path:
         new_pos = move_position(pos, move, grid, ROWS, COLS)
